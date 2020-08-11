@@ -1,0 +1,198 @@
+h1 {
+    color:  pink ;
+    text-align: center;
+}
+.Title {
+    color: red ;
+}
+
+#italic {
+    color: saddlebrown;
+}
+nav {
+    background-color: lawngreen;
+    text-align: center;
+}
+nav ul{
+    list-style: none;
+}
+nav li{
+    display: inline-block;
+}
+
+.container {
+    border: 10px dotted grey;
+    margin: 45px 50px 40px ;
+    padding: 20px;
+}
+
+.box {
+    
+ height:200px;
+ width: 200px;
+ background-color: rebeccapurple;
+ margin: 20px 5px;
+}
+
+@keyframes fadeMe {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#box1 {
+    animation-name: fadeMe;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes rotation {
+    0% { transform: rotate(90deg);}
+    50% { transform: rotate(180deg);}
+    100% { transform: rotate(360deg);}
+}
+
+#box2 {
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: 4s;
+    animation-timing-function: ease-in-out;
+    border-radius: 10%;
+    background-image: radial-gradient(circle,green,yellow,
+    black,pink);
+}
+
+@keyframes getbigger {
+    0% {transform: scale(1);}
+    50% {transform: scale(2);}
+    100% {transform: scale(.5);}
+}
+#box3 {
+    animation: getbigger infinite 8s ease-in;
+    border-radius: 50%;
+    background: black;
+}
+
+@keyframes changecolors {
+    0% { background-color: saddlebrown;}
+    25% { background-color: palevioletred;}
+    50% { background-color: maroon;}
+    70% { background-color: lawngreen;}
+}
+
+#box4 {
+    animation:  changecolors 3s 5s forwards;
+}
+@keyframes movebox {
+    0% { left:0px;top: 0px ;}
+    25% { left:100px;top: 0px ;}
+    50% { left:100px;top: 200px ;}
+    100% { left:0px;top: 0px ;}
+}
+#box5 {
+    position: relative;
+    background: red;
+    animation: movebox 5s 3s ;
+}
+#box6 {
+    top: 100px;
+    left: 200px;
+    position: relative;
+}
+
+.circle-img {
+    border-radius: 45%;
+}
+img {
+    box-shadow: 50px 45px 40px yellowgreen;
+}
+
+.flex {
+    border: 3px solid black ;
+    margin: 20px;
+    display : flex ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: center;
+}
+.row {
+    margin: 30px;
+}
+
+.input-field {
+margin: 20px;
+}
+
+
+/* form input {
+    display : block;
+    margin  :30px ;
+}
+form textarea {
+    display : block;
+    margin  : 30 px;
+}
+form button {
+    display : block;
+    margin  : 30 px;
+} */
+ form input,textarea,button {
+    display: block;
+    margin: 30px;
+} 
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 100px ) ;
+    grid-template-rows: repeat(3, [row] auto  );
+    background-color: #fff;
+    color: #444444;
+}
+
+.Box {
+    background-color: #444444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    z-index:10;
+
+}
+
+.a {
+    grid-column: col / span  2;
+    grid-row: row ;
+    display:flex;
+    justify-content:center ;
+}
+.b {
+    grid-column: col 3 / span  3 ;
+    grid-row: row ;
+}
+.c {
+    grid-column: col ;
+    grid-row: row 2 ;
+}
+.d {
+    grid-column: col 2 / span  3 ;
+    grid-row: row 2 ;
+}
+
+.e {
+    grid-column: col / span  5;
+    grid-row: row 3;
+}
+
+.f {
+    grid-column: col 3 / span 3;
+    grid-row: row 2  ;
+    background-color: rgba(49,121,207, 0.5);
+    z-index: 20;
+}
